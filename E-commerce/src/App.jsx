@@ -1,10 +1,13 @@
-import "./App.css";
+import "./index.css";
 import "react-toastify/dist/ReactToastify.css";
+import Header from "../src/layout/Header.jsx";
+import HeaderTop from "../src/layout/HeaderTop.jsx";
 
 function App() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <h1 className="text-3xl font-bold text-red-600">Merhaba Tailwind CSS!</h1>
+    <div>
+      <HeaderTop />
+      <Header />
     </div>
   );
 }

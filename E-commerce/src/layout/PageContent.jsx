@@ -25,7 +25,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="flex justify-center items-center relative w-full h-[750px] md:h-[600px] overflow-hidden">
+    <div className="flex justify-center items-center relative w-full h-[750px] md:h-[715px] overflow-hidden">
       {/* Hero Background */}
       <div className="absolute inset-0 bg-[#23856D] ">
         <div className="relative h-full">
@@ -33,30 +33,30 @@ const Hero = () => {
           <img
             src={slides[currentSlide].image}
             alt="Hero"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center "
           />
 
           {/* Content Overlay */}
-          <div className="absolute inset-0 bg-[#23856D]/40 flex items-center">
-            <div className="container mx-auto px-20 flex flex-col justify-center items-center md:px-8 ">
-              <div className="max-w-xl text-white flex flex-col justify-center items-center">
+          <div className="absolute inset-0  flex items-center justify-center md:text-left pl-16 ">
+            <div className="container  md:px-8 md:pt-[90px] lg:pl-12  ">
+              <div className="max-w-2xl text-white flex flex-col ">
                 {/* Season Tag */}
-                <span className="inline-block mb-4 text-sm font-bold tracking-wider">
+                <span className="block mb-5 text-sm font-bold tracking-widest md: mx-0 text-left ">
                   {slides[currentSlide].season}
                 </span>
 
                 {/* Main Title */}
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 mx-auto">
+                <h1 className="text-4xl pr-[300px] font-semibold mb-5 md:mt-5 text-left mx-0">
                   {slides[currentSlide].title}
                 </h1>
 
                 {/* Description */}
-                <p className="mb-6 text-lg opacity-90">
+                <p className="mb-6 text-lg pr-[50px] opacity-90 mx-0  md:pr-[350px] md:text-xlg ">
                   {slides[currentSlide].description}
                 </p>
 
                 {/* CTA Button */}
-                <button className="bg-[#2DC071] hover:bg-[#2DC071]/90 text-white px-8 py-3 rounded-md font-bold transition-colors">
+                <button className="block bg-[#2DC071] w-[50%] justify-center hover:bg-[#2DC071]/90 text-white  py-3 rounded-md  font-semibold transition-colors md:text-center mx-0 px-8 md:w-[25%]">
                   SHOP NOW
                 </button>
               </div>
@@ -66,29 +66,17 @@ const Hero = () => {
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-2 rounded-full transition-colors"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/0 hover:bg-white/30 p-1 rounded-full transition-colors"
           >
-            <ChevronLeft className="w-6 h-6 text-white" />
+            <ChevronLeft className="w-10 h-10 text-white" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/30 hover:bg-white/50 p-2 rounded-full transition-colors"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/0 hover:bg-white/30 p-1 rounded-full transition-colors"
           >
-            <ChevronRight className="w-6 h-6 text-white" />
+            <ChevronRight className="w-10 h-10 text-white" />
           </button>
-
-          {/* Slide Indicators */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
-            {slides.map((_, index) => (
-              <div
-                key={index}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  currentSlide === index ? "bg-white" : "bg-white/50"
-                }`}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </div>

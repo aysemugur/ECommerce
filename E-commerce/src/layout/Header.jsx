@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div className=" hidden sm:flex w-full flex flex-col justify-between items-center">
+    <div className="hidden sm:flex w-full flex flex-col justify-between items-center">
       {/* Header (Mobil ve Masaüstü için) */}
       <div className="bg-[#17213C] text-white text-sm p-2 px-7 w-full">
         <div className="flex justify-between items-center py-1 px-0">
@@ -10,7 +10,7 @@ const Header = () => {
               <i className="fas fa-phone-alt"></i>
               <span>(225) 555-0118</span>
             </div>
-            <div className="flex items-center space-x-1">
+            <div className="hidden sm:flex items-center space-x-1">
               <i className="fas fa-envelope"></i>
               <span>michelle.rivera@example.com</span>
             </div>

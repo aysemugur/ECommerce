@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,25 +16,25 @@ const Menu = () => {
         {/* Navigation (Mobil ve Masaüstü için) */}
         <div className="flex items-center justify-between mr-3">
           {/* Masaüstü menü - geniş ekranlar için */}
-          <nav className="hidden ml-3 md:flex gap-x-3 ">
-            <a href="/" className="text-gray-700 hover:text-blue-500">
+          <nav className="hidden  md:flex gap-x-3 ">
+            <Link to="/" className="text-gray-700 hover:text-blue-500">
               Home
-            </a>
-            <a href="/shop" className="text-gray-700 hover:text-blue-500">
+            </Link>
+            <Link to="/shop" className="text-gray-700 hover:text-blue-500">
               Shop
-            </a>
-            <a href="/about" className="text-gray-700 hover:text-blue-500">
+            </Link>
+            <Link to="/about" className="text-gray-700 hover:text-blue-500">
               About
-            </a>
-            <a href="/blog" className="text-gray-700 hover:text-blue-500">
+            </Link>
+            <Link to="/blog" className="text-gray-700 hover:text-blue-500">
               Blog
-            </a>
-            <a href="/contact" className="text-gray-700 hover:text-blue-500">
+            </Link>
+            <Link to="/contact" className="text-gray-700 hover:text-blue-500">
               Contact
-            </a>
-            <a href="/pages" className="text-gray-700 hover:text-blue-500">
+            </Link>
+            <Link to="/pages" className="text-gray-700 hover:text-blue-500">
               Pages
-            </a>
+            </Link>
           </nav>
         </div>
 
@@ -70,28 +71,28 @@ const Menu = () => {
       {/* Mobil Menüsü (Toggle ile açılır) */}
       {menuOpen && (
         <nav className="fixed w-full bg-white z-10 flex flex-col items-center justify-center mt-[210px]  pt-5 pb-4 ">
-          <a href="/" className=" text-gray-700 py-2  hover:text-blue-500">
+          <Link to="/" className=" text-gray-700 py-2  hover:text-blue-500">
             Home
-          </a>
-          <a
-            href="/product"
+          </Link>
+          <Link
+            to="/product"
             className=" text-gray-700 py-2 hover:text-blue-500"
           >
             Product
-          </a>
-          <a
-            href="/pricing"
+          </Link>
+          <Link
+            to="/pricing"
             className=" text-gray-700 py-2 hover:text-blue-500"
           >
             Pricing
-          </a>
+          </Link>
 
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className=" text-gray-700 py-2 hover:text-blue-500"
           >
             Contact
-          </a>
+          </Link>
         </nav>
       )}
     </div>

@@ -17,7 +17,7 @@ const Header = () => {
           </div>
 
           {/* Mesaj */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block mr-5">
             Follow Us and get a chance to win 80% off
           </div>
 

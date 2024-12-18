@@ -1,18 +1,25 @@
 import "./index.css";
 import "react-toastify/dist/ReactToastify.css";
-import Header from "../src/layout/Header.jsx";
-import Menu from "../src/layout/Menu.jsx";
-import PageContent from "../src/layout/PageContent.jsx";
-import Footer from "../src/layout/Footer.jsx";
+import HomePage from "./pages/HomePage";
+import ShopPage from "./pages/ShopPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
+import { Route, Switch } from "react-router-dom";
+
 function App() {
   return (
-    <div className="flex flex-col ">
-      <Header />
-      <Menu />
-      <PageContent />
-      <Footer />
-    </div>
+    <>
+      <Switch>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route path="/ShopPage">
+          <ShopPage />
+        </Route>
+        <Route path="/ProductDetailPage">
+          <ProductDetailPage />
+        </Route>
+      </Switch>
+    </>
   );
 }
-
 export default App;
